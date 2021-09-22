@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    container_name: api.example.com
+    restart: always
+    links:
+      - db
+    networks:
+      - web
+    volumes:
+      - '/var/log:/var/log'
+
+  db:
+    build: ./db
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
+
