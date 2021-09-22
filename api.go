@@ -1,13 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"context"
-	"net/http"
 	"encoding/json"
+	"fmt"
+	"net/http"
 
 	"github.com/gorilla/mux"
-	"go.mongodb.org/mongo-driver/mongo/bson"
+	"go.mongodb.org/mongo-driver/bson"
 )
 
 func main() {
