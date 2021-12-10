@@ -10,5 +10,5 @@ db.createUser({
 db = new Mongo().getDB('mainDB')
 db.createCollection('paper', {})
 
-db.paper.insert([{ "type": "printer", "size": "A1"}])
+db.paper.insert([{ "type": "printer", "size": "A4", "weight": 75}])
 EOF
