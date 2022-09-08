@@ -6,7 +6,7 @@ RUN go mod download
 RUN CGO_ENABLE=0 GOOS=linux go build -o api
 
 FROM alpine:latest
-RUN apk --no-cache add ca-certificates
+RUN apk --no-cache add ca-certificates gcompat
 
 WORKDIR /app
 COPY --from=builder /app .
